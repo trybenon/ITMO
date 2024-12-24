@@ -1,6 +1,6 @@
 <mxfile host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/25.0.2 Chrome/128.0.6613.186 Electron/32.2.5 Safari/537.36" version="25.0.2">
   <diagram name="Страница — 1" id="azBhv01O-wjYVOBtYrfg">
-    <mxGraphModel dx="1789" dy="1247" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="3300" pageHeight="2339" math="0" shadow="0">
+    <mxGraphModel dx="635" dy="443" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="3300" pageHeight="2339" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -318,6 +318,15 @@
         </mxCell>
         <mxCell id="X4Q98o9VTsKK6Nhpqr6--176" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.19;entryY=0.995;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="X4Q98o9VTsKK6Nhpqr6--157" target="X4Q98o9VTsKK6Nhpqr6--115">
           <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="X4Q98o9VTsKK6Nhpqr6--199" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.307;entryY=0.484;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="X4Q98o9VTsKK6Nhpqr6--194" target="X4Q98o9VTsKK6Nhpqr6--57">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="2800" y="500" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="2840" y="530" />
+              <mxPoint x="2799" y="530" />
+            </Array>
+          </mxGeometry>
         </mxCell>
         <mxCell id="X4Q98o9VTsKK6Nhpqr6--194" value="mother" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="2760" y="560" width="160" height="78" as="geometry" />
