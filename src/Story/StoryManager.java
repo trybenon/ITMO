@@ -1,67 +1,77 @@
 package Story;
 
-import Enum.Mood;
 import Person.*;
 import InAnimate.*;
-
 import java.util.ArrayList;
 import java.util.Random;
+import Enum.*;
 
-public class Story {
-    public static void go() {
-        Random random = new Random();
+public class StoryManager {
+    private Father father;
+    private Mother mother;
+    private ArrayList<Boys> sons;
+    private Daughter daughter;
+    private Well well;
+    private Pitcher pitcher;
+    private Random random;
 
+    public StoryManager() {
+        random = new Random();
+        initializeCharacters();
+        initializeObjects();
+    }
 
-        Father father = new Father("Anton");
-        Mother mother = new Mother("Larisa");
-        ArrayList<Boys> sons = new ArrayList<>();
+    private void initializeCharacters() {
+        father = new Father("Anton");
+        mother = new Mother("Larisa");
+        sons = new ArrayList<>();
         for (int i = 1; i <= 7; i++) {
             sons.add(new Boys("Вася " + i));
         }
-        Daughter daughter = new Daughter("Nastya");
-        Well well = new Well("Старый колодец", random.nextBoolean()); // Наличие воды задаётся один раз
-        Pitcher pitcher = new Pitcher("Глиняный кувшин");
+        daughter = new Daughter("Nastya");
+    }
 
-        // Описание начального состояния
+    private void initializeObjects() {
+        well = new Well("Старый колодец", random.nextBoolean());
+        pitcher = new Pitcher("Глиняный кувшин");
+    }
+
+    public void describeInitialState() {
         father.describe();
         mother.describe();
         mother.act();
         well.describe();
         pitcher.describe();
         father.act();
+    }
 
-        // Сыновья идут за водой
+    public void sonsFetchWater() {
         for (Boys son : sons) {
             son.moveTo("колодец");
 
-            // Проверка: если кувшин уже наполнен, сыновья возвращаются домой
             if (pitcher.isFilled()) {
                 System.out.println("Кувшин уже наполнен, сыновья возвращаются домой.");
-                break;
+                return;
             }
 
-            // Проверка: если колодец пуст
             if (!well.getHasWater()) {
                 System.out.println("Колодец пуст! Сыновья не могут наполнить кувшин.");
-                break;
+                return;
             }
 
-            // Попытка наполнить кувшин
             if (random.nextBoolean()) {
                 System.out.println("Кувшин падает в колодец!");
                 pitcher.breakPitcher();
-                break;
+                return;
             } else {
                 System.out.println(son.getName() + " успешно наполняет " + pitcher.getName() + " водой.");
                 pitcher.fill();
                 son.moveTo("дом");
             }
         }
+    }
 
-        // Описание состояния кувшина
-        pitcher.describe();
-
-        // Реакция отца
+    public void fatherReaction() {
         if (pitcher.isBroken() || !well.getHasWater()) {
             father.setMood(Mood.ANNOYED);
             father.curse(sons);
@@ -71,13 +81,12 @@ public class Story {
                 daughter.recover();
             }
         }
+    }
 
-        // Итоговое описание
+    public void describeFinalState() {
         daughter.describe();
         for (Boys son : sons) {
             son.describe();
         }
     }
 }
-
-

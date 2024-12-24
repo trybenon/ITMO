@@ -2,6 +2,11 @@ package Story;
 
 public class Main {
     public static void main(String[] args) {
-    Story.go();
+        StoryManager storyManager = new StoryManager();
+
+        storyManager.describeInitialState();
+        storyManager.sonsFetchWater();
+        storyManager.fatherReaction();
+        storyManager.describeFinalState();
     }
 }
