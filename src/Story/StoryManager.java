@@ -2,9 +2,13 @@ package Story;
 
 import Person.*;
 import InAnimate.*;
+
 import java.util.ArrayList;
 import java.util.Random;
+
 import Enum.*;
+import Exception.PitcherBrokenException;
+
 
 public class StoryManager {
     private Father father;
@@ -45,7 +49,7 @@ public class StoryManager {
         father.act();
     }
 
-    public void sonsFetchWater() {
+    public void sonsFetchWater() throws PitcherBrokenException {
         for (Boys son : sons) {
             son.moveTo("колодец");
 
@@ -54,7 +58,7 @@ public class StoryManager {
                 return;
             }
 
-            if (!well.getHasWater()) {
+            if (!well.hasWater()) {
                 System.out.println("Колодец пуст! Сыновья не могут наполнить кувшин.");
                 return;
             }
@@ -62,7 +66,7 @@ public class StoryManager {
             if (random.nextBoolean()) {
                 System.out.println("Кувшин падает в колодец!");
                 pitcher.breakPitcher();
-                return;
+                throw new PitcherBrokenException("Кувшин разбит и не может быть использован.");
             } else {
                 System.out.println(son.getName() + " успешно наполняет " + pitcher.getName() + " водой.");
                 pitcher.fill();
@@ -71,8 +75,9 @@ public class StoryManager {
         }
     }
 
+
     public void fatherReaction() {
-        if (pitcher.isBroken() || !well.getHasWater()) {
+        if (pitcher.isBroken() || !well.hasWater()) {
             father.setMood(Mood.ANNOYED);
             father.curse(sons);
         } else {

@@ -21,6 +21,6 @@ public class Daughter extends Animate {
 
     @Override
     public void describe() {
-        System.out.println("Дочка " + name + (isWeak ? " маленькая и хилая" : " Sздоровая"));
+        System.out.println("Дочка " + name + (isWeak ? " маленькая и хилая" : " здоровая"));
     }
 }

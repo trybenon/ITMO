@@ -1,5 +1,5 @@
 package InAnimate;
-
+import Exception.PitcherBrokenException;
 public class Pitcher extends InAnimate {
     private boolean isBroken;
     private boolean isFilled;
@@ -9,14 +9,14 @@ public class Pitcher extends InAnimate {
 
     }
 
-    public void fill(){
+    public void fill() throws PitcherBrokenException{
         if (!isBroken){
             isFilled = true;
             System.out.println(name + " наполнен водой");
         }
         else
         {
-            System.out.println(name + " сломан, его нельзя наполнить водой");
+            throw new PitcherBrokenException(name + " сломан, его нельзя наполнить водой");
 
         }
     }
