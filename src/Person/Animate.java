@@ -1,13 +1,16 @@
 package Person;
 import Entity.Entity;
 import Interfaces.Actionable;
-import Enum.Mood;
+import Enum.*;
+import Interfaces.Christening;
 
-public abstract class Animate extends Entity implements Actionable {
+public abstract class Animate extends Entity implements Actionable{
     protected Mood mood;
-    public Animate(String name, Mood mood){
+    protected Christen christen;
+    public Animate(String name, Mood mood, Christen christen){
         super(name);
         this.mood = mood;
+        this.christen = christen;
     }
 
     public Mood getMood() {
@@ -18,4 +21,17 @@ public abstract class Animate extends Entity implements Actionable {
         this.mood = mood;
     }
 
+    public Christen getChristen() {
+        return christen;
+    }
+
+    public void setChristen(Christen christen) {this.christen = christen;}
+
+
+
+
+
+
+
 }
+

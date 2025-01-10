@@ -84,6 +84,8 @@ public class StoryManager {
             System.out.println("Отец доволен: сыновья принесли воду.");
             if (random.nextBoolean()) {
                 daughter.recover();
+                daughter.christen();
+                System.out.println("Статус после крещения: " + daughter.getChristen().getDescription());
             }
         }
     }

@@ -1,6 +1,6 @@
 package Person;
 
-import Enum.Mood;
+import Enum.*;
 import Interfaces.Movable;
 
 public class Boys extends Animate implements Movable {
@@ -8,7 +8,7 @@ public class Boys extends Animate implements Movable {
     private boolean isTransforamtion;
 
     public Boys(String name) {
-        super(name, Mood.ENJOY);
+        super(name, Mood.ENJOY, Christen.CHRISTEN);
         this.isTransforamtion = false;
     }
 

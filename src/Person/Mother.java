@@ -1,11 +1,11 @@
 package Person;
 
-import Enum.Mood;
+import Enum.*;
 
 public class Mother extends Animate {
 
     public Mother(String name){
-        super(name, Mood.ENJOY);
+        super(name, Mood.ENJOY, Christen.CHRISTEN);
 
     }
     @Override

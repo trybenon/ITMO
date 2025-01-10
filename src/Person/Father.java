@@ -1,12 +1,12 @@
 package Person;
 
-import Enum.Mood;
+import Enum.*;
 
 import java.util.ArrayList;
 
 public class Father extends Animate {
     public Father(String name) {
-        super(name, Mood.HOPES);
+        super(name, Mood.HOPES, Christen.CHRISTEN);
     }
 
     public void curse(ArrayList<Boys> sons) {
