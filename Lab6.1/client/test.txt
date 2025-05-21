@@ -1,0 +1,56 @@
+
+# Блок информационных команд
+help
+info
+show
+
+# Блок добавления элементов
+add
+John
+50
+80.5
+185
+75
+RED
+10.5
+20.3
+30
+AB123456
+
+add_if_max
+Alice
+23
+30.0
+190
+80
+BLUE
+15.0
+25.5
+35
+CD789012
+
+# Блок обновления элемента
+update 1747692236620
+Mike
+55
+23.0
+180
+70
+red
+12.0
+22.0
+32
+EF345678
+
+# Блок удаления элементов
+remove_by_id 1
+remove_head
+
+
+# Блок специальных команд
+head
+average_of_height
+print_ascending
+print_field_ascending_height
+
+

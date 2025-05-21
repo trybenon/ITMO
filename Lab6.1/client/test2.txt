@@ -1,0 +1,1 @@
+execute_script /Users/trybenongmail.com/IdeaProjectexecute_script /Users/trybenongmail.com/IdeaProjects/Lab6.ver2/client/test2.txts/Lab6.ver1 — backup/client/test.txt
