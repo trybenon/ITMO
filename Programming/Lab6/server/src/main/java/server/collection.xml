@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<people>
+  <person>
+    <id>1747692236623</id>
+    <name>Alice</name>
+    <coordinates>
+      <x>23</x>
+      <y>30.0</y>
+    </coordinates>
+    <creationDate>2025-05-20T01:03:56.623715</creationDate>
+    <height>190</height>
+    <weight>80</weight>
+    <passportID>CD789012</passportID>
+    <eyeColor>BLUE</eyeColor>
+    <location>
+      <x>15.0</x>
+      <y>25.5</y>
+      <z>35</z>
+    </location>
+  </person>
+</people>

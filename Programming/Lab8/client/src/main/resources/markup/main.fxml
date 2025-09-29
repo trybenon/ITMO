@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<?import javafx.scene.canvas.Canvas?>
+<AnchorPane prefHeight="643.0" prefWidth= "1296.0" style="-fx-background-color: f1f0ec;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.fx.MainWindow">
+    <children>
+      <GridPane layoutX="14.0" layoutY="559.0" prefHeight="71.0" prefWidth="788.0">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="103.0" prefWidth="110.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="103.0" prefWidth="110.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="103.0" prefWidth="110.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="103.0" prefWidth="110.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="103.0" prefWidth="110.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="103.0" prefWidth="110.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="103.0" prefWidth="110.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Button fx:id="helpBtn" mnemonicParsing="false" onAction="#help" prefHeight="33.0" prefWidth="110.0" style="-fx-background-color: efe2ba; -fx-background-radius: 20 0 0 0; " text="Помощь" />
+            <Button fx:id="exitBtn" mnemonicParsing="false" onAction="#exit" prefHeight="33.0" prefWidth="110.0" style="-fx-background-color: efe2ba; -fx-background-radius: 0 0 0 20;" text="Выйти" GridPane.rowIndex="1" />
+            <Button fx:id="headBtn" mnemonicParsing="false" onAction="#head" prefHeight="33.0" prefWidth="110.0" style="-fx-background-color: efe2ba; -fx-background-radius: 0 0 0 0;" text="Верхний персон" GridPane.columnIndex="2" />
+            <Button fx:id="infoBtn" mnemonicParsing="false" onAction="#info" prefHeight="33.0" prefWidth="110.0" style="-fx-background-color: efe2ba; -fx-background-radius: 0 0 0 0;" text="Инфо" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <Button fx:id="addBtn" mnemonicParsing="false" onAction="#add" prefHeight="33.0" prefWidth="110.0" style="-fx-background-color: efe2ba; -fx-background-radius: 0 0 0 0;" text="Добавить" GridPane.columnIndex="3" />
+            <Button fx:id="addIfMaxBtn" mnemonicParsing="false" onAction="#addIfMax" prefHeight="33.0" prefWidth="110.0" style="-fx-background-color: efe2ba; -fx-background-radius: 0 0 0 0;" text="Добавить, если максимален" GridPane.columnIndex="4" />
+            <Button fx:id="updateBtn" mnemonicParsing="false" onAction="#update" prefHeight="33.0" prefWidth="110.0" style="-fx-background-color: efe2ba; -fx-background-radius: 0 0 0 0;" text="Обновить по ИД" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+            <Button fx:id="removeByIdBtn" mnemonicParsing="false" onAction="#removeById" prefHeight="33.0" prefWidth="110.0" style="-fx-background-color: efe2ba; -fx-background-radius: 0 0 20 0;" text="Удалить по ИД" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+            <Button fx:id="clearBtn" mnemonicParsing="false" onAction="#clear" prefHeight="33.0" prefWidth="110.0" style="-fx-background-color: efe2ba; -fx-background-radius: 0 0 0 0;" text="Очистить" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+             <Button fx:id="averageOfHeightBtn" mnemonicParsing="false" onAction="#averageOfHeight" prefHeight="33.0" prefWidth="110.0" style="-fx-background-color: efe2ba; -fx-background-radius: 0 0 0 0;" text="Средний рост" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+             <Button fx:id="printAscendingBtn" mnemonicParsing="false" onAction="#printAscending" prefHeight="33.0" prefWidth="110.0" style="-fx-background-color: efe2ba; -fx-background-radius: 0 0 0 0;" text="Вывести рост в порядке возрастания" GridPane.columnIndex="1"/>
+             <Button fx:id="executeScriptBtn" mnemonicParsing="false" onAction="#executeScript" prefHeight="33.0" prefWidth="110.0" style="-fx-background-color: efe2ba; -fx-background-radius: 0 20 0 0;" text="Выполнить скрипт" GridPane.columnIndex="5" />
+         </children>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </GridPane>
+       <TableView fx:id="personTable" layoutX="14.0" layoutY="59.0" prefHeight="484.0" prefWidth="800.0" style="-fx-background-radius: 0 0 20 20;">
+           <columns>
+               <TableColumn fx:id="idColumn" maxWidth="50.0" minWidth="50.0" prefWidth="50.0"  style="-fx-background-radius: 20 20 20 20;" text="ИД" />
+               <TableColumn fx:id="nameColumn" prefWidth="100.0" style="-fx-background-radius: 20 20 20 20;"  text="Имя" />
+               <TableColumn fx:id="xCoordinateColumn" maxWidth="50.0" minWidth="50.0" prefWidth="50.0" style="-fx-background-radius: 20 20 20 20;" text="X" />
+               <TableColumn fx:id="yCoordinateColumn" maxWidth="50.0" minWidth="50.0" prefWidth="50.0" style="-fx-background-radius: 20 20 20 20;" text="Y" />
+               <TableColumn fx:id="weightColumn" maxWidth="50.0" minWidth="50.0" prefWidth="50.0" style="-fx-background-radius: 20 20 20 20;" text="Вес" />
+               <TableColumn fx:id="heightColumn" maxWidth="50.0" minWidth="50.0" prefWidth="50.0" style="-fx-background-radius: 20 20 20 20;" text="Высота" />
+               <TableColumn fx:id="passportIDColumn" prefWidth="100.0" style="-fx-background-radius: 20 20 20 20;" text="Паспорт" />
+               <TableColumn fx:id="eyeColorColumn" prefWidth="100.0" style="-fx-background-radius: 20 20 20 20;" text="Глаза" />
+               <TableColumn fx:id="locationXColumn" prefWidth="50.0" style="-fx-background-radius: 20 20 20 20;" text="X" />
+               <TableColumn fx:id="locationYColumn" prefWidth="50.0" style="-fx-background-radius: 20 20 20 20;" text="Y" />
+               <TableColumn fx:id="locationZColumn" prefWidth="50.0" style="-fx-background-radius: 20 20 20 20;" text="Z" />
+               <TableColumn fx:id="userLoginColumn" prefWidth="100.0" style="-fx-background-radius: 20 20 20 20;" text="Логин" />
+           </columns>
+           <cursor>
+               <Cursor fx:constant="HAND" />
+           </cursor>
+       </TableView>
+      <GridPane layoutX="14.0" layoutY="7.0" prefHeight="45.0" prefWidth="788.0">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="202.0" minWidth="10.0" prefWidth="202.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="153.0" minWidth="10.0" prefWidth="114.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Button fx:id="removeFilterBtn" mnemonicParsing="false" onAction="#removeFilter" prefHeight="45.0" prefWidth="185.0" style="-fx-background-color: efe2ba; -fx-background-radius: 20 0 0 20;" text="Сбросить фильтр" GridPane.columnIndex="3">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <GridPane prefHeight="45.0" prefWidth="161.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="65.0" minWidth="6.0" prefWidth="46.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="196.0" minWidth="10.0" prefWidth="156.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label fx:id="userTxt" prefHeight="45.0" prefWidth="168.0" style="-fx-background-color: d79922; -fx-background-radius: 0 20 20 0;" text="USER" textFill="#efe2ba" GridPane.columnIndex="1">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font></Label>
+                  <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: d79922;">
+                     <children>
+                        <ImageView fx:id="image" fitHeight="36.0" fitWidth="39.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true" />
+                     </children></Pane>
+               </children>
+            </GridPane>
+             <ComboBox fx:id="languageComboBox" prefHeight="61.0" prefWidth="139.0" promptText="Язык" style="-fx-background-color: efe2ba; -fx-background-radius: 0 20 20 0;" GridPane.columnIndex="4">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></ComboBox>
+            <ProgressIndicator fx:id="reconnectionBar" prefHeight="40.0" prefWidth="47.0" visible="false" GridPane.columnIndex="2" />
+            <Label fx:id="reconnectionText" alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="195.0" text="Переподключение" visible="false" GridPane.columnIndex="1">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </GridPane>
+        <Pane fx:id="personBase" layoutX="817.0" layoutY="14.0" prefHeight="618.0" prefWidth="469.0" style="-fx-background-color: c5cbe3; -fx-background-radius: 20 20 20 20;">
+            <cursor>
+                <Cursor fx:constant="OPEN_HAND" />
+            </cursor>
+            <children>
+                <Canvas fx:id="personCanvas" height="618.0" width="469.0" />
+            </children></Pane>
+
+   </children>
+</AnchorPane>
