@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="618.0" prefWidth="703.0" style="-fx-background-color: f1f0ec;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.fx.HelpWindow">
+    <children>
+        <Button fx:id="okBtn" layoutX="304.0" layoutY="563.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="96.0" style="-fx-background-color: efe2ba; -fx-background-radius: 20 20 20 20;" text="ОК">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+        <Label fx:id="txt" alignment="TOP_LEFT" layoutX="25.0" layoutY="105.0" prefHeight="410.0" prefWidth="667.0" text="Н-да.. Лажа." wrapText="true">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+      <Label fx:id="mainTxt" alignment="CENTER" contentDisplay="CENTER" layoutX="172.0" layoutY="42.0" prefHeight="38.0" prefWidth="361.0" text="инфо" textAlignment="CENTER">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+    </children>
+</AnchorPane>
