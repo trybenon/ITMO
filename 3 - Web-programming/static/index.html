@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>lab1</title>
+</head>
+<body>
+<header class="header">
+    <h2>ФИО: Рыжаков Владислав Александрович</h2>
+    <h3>Группа: P3223</h3>
+    <h3>Номер варианта: 467297</h3>
+</header>
+<main>
+<div class="form-block">
+    <div class="graph" >
+        <svg viewBox="0 0 300 300" width="400" height="400" xmlns="http://www.w3.org/2000/svg">
+
+            <!-- Оси -->
+            <line x1="0" x2="300" y1="150" y2="150" stroke="black"></line>
+            <line x1="150" x2="150" y1="0" y2="300" stroke="black"></line>
+
+            <!-- Стрелки -->
+            <polygon points="150,0 145,15 155,15" fill="black"></polygon>
+            <polygon points="300,150 285,145 285,155" fill="black"></polygon>
+
+            <!-- Синяя область -->
+            <!-- Прямоугольник (верх слева) -->
+            <rect x="100" y="50" width="50" height="100" fill="blue" fill-opacity="0.6"></rect>
+
+            <!-- Треугольник (верх справа) -->
+            <polygon points="150,50 250,150 150,150" fill="blue" fill-opacity="0.6"></polygon>
+
+            <!-- Четверть круга (низ справа) -->
+            <path d="M150 150 L250 150 A100 100 0 0 1 150 250 Z" fill="blue" fill-opacity="0.6"></path>
+
+            <!-- Засечки по оси X -->
+            <line x1="200" x2="200" y1="145" y2="155" stroke="black"></line>
+            <line x1="250" x2="250" y1="145" y2="155" stroke="black"></line>
+            <line x1="100" x2="100" y1="145" y2="155" stroke="black"></line>
+            <line x1="50" x2="50" y1="145" y2="155" stroke="black"></line>
+
+            <!-- Засечки по оси Y -->
+            <line x1="145" x2="155" y1="100" y2="100" stroke="black"></line>
+            <line x1="145" x2="155" y1="50" y2="50" stroke="black"></line>
+            <line x1="145" x2="155" y1="200" y2="200" stroke="black"></line>
+            <line x1="145" x2="155" y1="250" y2="250" stroke="black"></line>
+
+            <!-- Подписи -->
+            <text x="195" y="140">R/2</text>
+            <text x="245" y="140">R</text>
+            <text x="90" y="140">-R/2</text>
+            <text x="40" y="140">-R</text>
+
+            <text x="160" y="105">R/2</text>
+            <text x="160" y="55">R</text>
+            <text x="160" y="205">-R/2</text>
+            <text x="160" y="255">-R</text>
+
+            <text x="160" y="15">Y</text>
+            <text x="285" y="140">X</text>
+
+        </svg>
+
+    </div>
+
+
+    <form id ="valForm">
+<div id="xForm" >
+    <label>Выберите X:</label><br>
+    <label><input type="radio" name="x" value="-4">-4</label>
+    <label><input type="radio" name="x" value="-3">-3</label>
+    <label><input type="radio" name="x" value="-2">-2</label>
+    <label><input type="radio" name="x" value="-1">-1</label>
+    <label><input type="radio" name="x" value="0">0</label>
+    <label><input type="radio" name="x" value="1">1</label>
+    <label><input type="radio" name="x" value="2">2</label>
+    <label><input type="radio" name="x" value="3">3</label>
+    <label><input type="radio" name="x" value="4">4</label>
+</div>
+        <div id="yForm" >
+            <label>Введите Y: <input type="text" id="y" placeholder="Число от -5 до 5"></label>
+        </div>
+        <div id="rForm">
+            <label>Введите R: <input type="text" id="r" placeholder="Число от 1 до 4"></label>
+        </div>
+        <input type="submit" value="Отправить">
+
+    </form>
+</div>
+</main>
+</body>
+<script src="script.js"></script>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>lab1</title>
+</head>
+<header><h1>Семён ЛОШАРА</h1></header>
+</html>
